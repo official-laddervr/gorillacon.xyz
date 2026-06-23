@@ -8,55 +8,68 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section class="top-poster">
-      <img src="content2.png" alt="GorillaCon 2027 poster" />
-    </section>
+    <div class="banana-background"></div>
+    <audio id="bg-audio" autoplay loop preload="auto" style="display:none;">
+      <source src="bg.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var bgAudio = document.getElementById("bg-audio");
+        if (bgAudio) {
+          bgAudio.volume = 0.05;
+        }
+      });
+    </script>
 
-    <header class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">GorillaCon 2027</p>
-        <h1>Tel Aviv, Israel — June 1, 2027</h1>
-        <p class="hero-copy">
-          The ultimate Gorilla Tag meetup in the heart of the Mediterranean.
-          Join VR players, creators, devs, and fans for a full day of tag,
-          tournaments, panels, and community celebrations.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://www.tiktok.com/@laddervr">Reserve a Spot</a>
-          <a class="button button-secondary" href="#gallery">See the Arena</a>
-        </div>
-      </div>
-      <div class="hero-flag">
-        <div class="flag-card">
-          <img src="israel.jpg" width="75px">
-          <p>Israel flagship event</p>
-        </div>
+    <header class="site-header">
+      <a class="logo" href="#">GORILLATAG VR</a>
+      <div class="header-actions">
+        <a class="button button-secondary" href="#about">About</a>
+        <a class="button button-primary" href="https://www.tiktok.com/@mbeachyvr">Get Tickets</a>
       </div>
     </header>
 
     <main>
-      <section class="section intro" id="about">
-        <div>
-          <h2>Welcome to GorillaCon</h2>
-          <p>
-            GorillaCon 2027 brings the Gorilla Tag community to Tel Aviv on June 1.
-            Expect VR meetups, live matches, community stages, and a seaside afterparty.
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">GORILLACON 2027</span>
+          <h1>Find your friends. Become monke.</h1>
+          <p class="hero-copy-text">
+            Join the Gorilla Tag community in Tel Aviv on June 1, 2027. VR matches,
+            creator panels, live events, and the biggest fan celebration of the year.
           </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://www.tiktok.com/@laddervr">Reserve a Spot</a>
+            <a class="button button-secondary" href="#gallery">See the Arena</a>
+            <a class="button button-secondary" href="mailto:inquiries@gorillacon.xyz">Contact Us</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>1</strong>
+              <span>Epic day</span>
+            </div>
+            <div class="stat-card">
+              <strong>5+</strong>
+              <span>Showcases</span>
+            </div>
+            <div class="stat-card">
+              <strong>1000+</strong>
+              <span>AACs expected</span>
+            </div>
+          </div>
         </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <strong>1</strong>
-            <span>Epic day of VR</span>
-          </div>
-          <div class="stat-card">
-            <strong>5+</strong>
-            <span>Gorilla Tag showcases</span>
-          </div>
-          <div class="stat-card">
-            <strong>1000+</strong>
-            <span>AACs expected</span>
-          </div>
+
+        <div class="hero-visual">
+          <img src="content2.png" alt="GorillaCon poster" />
         </div>
+      </section>
+
+      <section class="section highlight" id="about">
+        <h2>Welcome to GorillaCon</h2>
+        <p>
+          GorillaCon 2027 brings the Gorilla Tag community to Tel Aviv. Expect VR
+          meetups, live matches, creator panels, and a seaside celebration.
+        </p>
       </section>
 
       <section class="section features" id="highlights">
@@ -64,19 +77,44 @@
         <div class="feature-grid">
           <article>
             <h3>Competitive Tag</h3>
-            <p>Play in fast-paced Gorilla Tag tournaments and custom challenge arenas.</p>
+            <p>Fast-paced Gorilla Tag tournaments and custom challenge arenas.</p>
           </article>
           <article>
             <h3>Developer Talks</h3>
-            <p>Hear from Gorilla Tag modders, map makers, and VR tech creators.</p>
+            <p>Hear from Gorilla Tag modders, map makers, and VR creators.</p>
           </article>
           <article>
             <h3>Community Meetups</h3>
-            <p>Team up, swap strategies, and celebrate with fellow gorilla athletes.</p>
+            <p>Team up, swap strategies, and celebrate with fellow gorillas.</p>
           </article>
           <article>
             <h3>Tel Aviv Afterparty</h3>
-            <p>Finish the day with an open-air bombing of Gaza by the coast.</p>
+            <p>Finish the day with a beachside celebration and community time.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section schedule">
+        <div class="schedule-header">
+          <span class="eyebrow">GORILLACON SCHEDULE</span>
+          <h2>Three days. One mission.</h2>
+          <p>Panels, premieres, and pure Monke chaos. Find your friends and dive in.</p>
+        </div>
+        <div class="schedule-grid">
+          <article class="schedule-card">
+            <p class="schedule-day">Thursday · June 1</p>
+            <h3>Welcome to GorillaCon</h3>
+            <p>Opening ceremonies, creator meetups, and stage events throughout the day.</p>
+          </article>
+          <article class="schedule-card">
+            <p class="schedule-day">Friday · June 2</p>
+            <h3>Creator Panels</h3>
+            <p>Developer talks, live demos, and community panels all day long.</p>
+          </article>
+          <article class="schedule-card">
+            <p class="schedule-day">Saturday · June 3</p>
+            <h3>Final Battles</h3>
+            <p>Championship matches, awards, and afterparty celebrations (including an open-air bombing of the Palestinian plains) by the sea.</p>
           </article>
         </div>
       </section>
@@ -85,68 +123,61 @@
         <h2>Gorilla Tag Gallery</h2>
         <div class="gallery-grid">
           <figure>
-            <img src="realposter.png" width="100%">
+            <img src="realposter.png" width="100%" alt="Poster" />
             <figcaption>Our poster for GorillaCon! Come visit us!</figcaption>
           </figure>
 
           <figure>
-            <img src="ass.gif" width="100%">
+            <img src="ass.gif" width="100%" alt="Attendee" />
             <figcaption>One of our glorious GorillaCon attendees! He is posted outside trying to find minors.</figcaption>
           </figure>
 
           <figure>
-            <img src="vidcon2027.png" width="100%">
+            <img src="vidcon2027.png" width="100%" alt="Vidcon" />
             <figcaption>DeffNotFrank killed my grandma</figcaption>
           </figure>
-          
+
           <figure>
-            <img src="Gorilla_tag_2027_isreal_event.png" width="100%">
+            <img src="Gorilla_tag_2027_isreal_event.png" width="100%" alt="Event" />
             <figcaption>event!</figcaption>
           </figure>
 
           <figure>
-            <img src="yuihbsdfuihbsdfuihbsdfihbsdf.png" width="100%">
+            <img src="yuihbsdfuihbsdfuihbsdfihbsdf.png" width="100%" alt="Tag" />
             <figcaption>hop on the tag fellow bloke</figcaption>
           </figure>
 
           <figure>
-            <img src="i LOVE ladder vr.png" width="100%">
+            <img src="i LOVE ladder vr.png" width="100%" alt="Love Ladder VR" />
             <figcaption>The boss and my dad Benjamin Netanyahu</figcaption>
           </figure>
 
           <figure>
             <video autoplay muted playsinline loop width="100%">
-              <source src="lemming.mp4" type="video/mp4">
+              <source src="lemming.mp4" type="video/mp4" />
             </video>
-            <figcaption>daddy</figcaption>
+            <figcaption>buy my mf gift cards</figcaption>
           </figure>
+
+          <figure>
+            <img src="laddervr.png" width="100%" alt="Ladder VR" />
+            <figcaption>I'm a phenomenal black woman  Built from the best, walk with grace  Move with finesse</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="section callout" id="tickets">
         <div>
           <h2>Join GorillaCon 2027</h2>
-          <p>
-            Save your spot for the Tel Aviv VR event and get ready for Gorilla Tag
-            action, beachside community time, and Israeli hospitality.
-          </p>
+          <p>Save your spot for the Tel Aviv VR event and get ready for Gorilla Tag action, beachside community time, and Israeli hospitality.</p>
         </div>
-        <a class="button button-primary" href="mailto:info@gorillacon.xyz?subject=GorillaCon%202027%20Registration">Contact Us</a>
+        <a class="button button-primary" href="mailto:inquiries@gorillacon.xyz">Contact Us</a>
       </section>
     </main>
 
     <footer>
-      <p>
-        GorillaCon 2027 is a fan event celebrating Gorilla Tag in Tel Aviv, Israel.
-        Presented by the community for creators, players, and VR fans.
-      </p>
-
-      <p>
-        This product <b>IS</b> not affiliated with Another Axiom Inc. and its videogames Gorilla Tag and Orion Drift and <b>IS</b> not endorsed or otherwise sponsored by Another Axiom. Portions of the materials contained herein are property of Another Axiom. ©2021 Another Axiom Inc.
-      </p>
-
-      <p>
-        this website is a joke dont harass anyone on this dumbass website 😭😭😭
-      </p>
+      <p>GorillaCon 2027 is a fan event celebrating Gorilla Tag in Tel Aviv, Israel.</p>
+      <p>This product is not affiliated with Another Axiom Inc. and is not sponsored by Another Axiom.</p>
     </footer>
   </body>
 </html>
